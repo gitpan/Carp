@@ -7,4 +7,5 @@ README
 lib/Carp.pm
 lib/Carp/Heavy.pm
 t/Carp.t
+t/heavy.t
 t/vivify_gv.t
