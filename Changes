@@ -1,3 +1,32 @@
+  * bugfix: don't get confused by a deleted stash when generating
+    stack trace
+
+  * bugfix: don't vivify @CARP_NOT and @ISA in caller's namespace
+
+  * bugfix: don't generate Unicode warnings on old perls when an argument
+    in a stack trace contains a non-character codepoint
+
+  * in stack traces, consistently quote string arguments
+
+  * in stack traces, new hookable mechanism for formatting reference
+    arguments
+
+  * document exportable subroutines longmess() and shortmess()
+
+  * if Carp::Heavy gets loaded by a mismatched Carp (especially an
+    older one that expects Carp::Heavy to do real work), give a useful
+    error message
+
+  * when truncating an argument list in a stack trace, don't format the
+    arguments that got truncated
+
+  * factor out non-vivifying subroutine lookup
+
+  * regularise test for vivification of B::
+
+  * in tests, avoid using package name "B" when not actually testing
+    things relating to the B module
+
 version 1.26; 2012-06-18
 
   * bugfix: get ", <fh> line 123" phrase from CORE::die, not allowing
